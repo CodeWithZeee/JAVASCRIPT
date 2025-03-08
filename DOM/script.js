@@ -15,6 +15,5 @@ console.log(document.body.children)
 console.log(document.body.firstElementChild)
 console.log(document.body.firstElementChild.children)
 
-console.log(document.body.children[1]) // returns the 2nd child element of the body element (i.e table here)\
-
+console.log(document.body.children[1]) // returns the 2nd child element of the body element (i.e table here)
 
