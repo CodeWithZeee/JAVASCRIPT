@@ -14,3 +14,7 @@ document.body.firstElementChild.children[0] // returns the first child element
 console.log(document.body.children)
 console.log(document.body.firstElementChild)
 console.log(document.body.firstElementChild.children)
+
+console.log(document.body.children[1]) // returns the 2nd child element of the body element (i.e table here)\
+
+
