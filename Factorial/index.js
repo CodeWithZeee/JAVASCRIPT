@@ -22,4 +22,4 @@ let n = prompt("Enter a number: ");
 for(let i=1; i<=n; i++){
     arr2.push(i);
 }
-console.log(arr2.reduce(fact)) // Output --> 120
+console.log(arr2.reduce(fact)) 
