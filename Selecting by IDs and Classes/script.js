@@ -26,7 +26,7 @@ document.querySelectorAll(".box").forEach(e =>{
 // }
 
 document.getElementsByTagName("div")[0].style.backgroundColor = "blue";  // It will change the background color of the first div element to blue (which is container here)
-// Here the first div is being targeted through its tag name 'div' and its index number and then its background color is changed to blue.
+// Here the first div is being targeted through its tag name 'div' and its index and then its background color is changed to blue.
 
 
 
