@@ -7,4 +7,48 @@
  */
 
 // Answer 1)
-document.body.
+document.body.firstElementChild.addEventListener('click', () =>{
+    alert('First button clicked')
+})
+
+document.body.firstElementChild.nextElementSibling.addEventListener('click', () =>{
+    alert('Second button clicked')
+})
+
+document.body.children[2].addEventListener('click', () =>{
+    alert('Third button clicked')
+})
+
+// Another method can be found in the html also
+
+// Answer (2) is in the html file
+
+// Answer 3)
+
+document.getElementById("google").addEventListener("click", function() { 
+  window.location = "https://www.google.com";
+})
+
+document.getElementById("youtube").addEventListener("click", function() { 
+  window.location = "https://www.youtube.com";
+})
+
+
+// Answer 4)
+const fetchContent = async (url) => {
+  con = await fetch(url);
+  let a = await con.json()
+  return a;
+}
+
+setInterval(async function() {
+  let url = "https://jsonplaceholder.typicode.com/todos/1"
+  console.log(await fetchContent(url))
+}, 3000)
+
+
+// Answer 5)
+
+  setInterval(() =>{
+    document.getElementById("bulb").classList.toggle("bulb")
+  }, 500)

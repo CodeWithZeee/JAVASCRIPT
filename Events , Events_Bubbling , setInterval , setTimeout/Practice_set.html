@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .bulb {
+            background: yellow;
+        }
+
+        .bulbcontainer {
+            height: 341px;
+            width: 341px;
+        }
+    </style>
 </head>
+
 <body>
-    <button>Button 1</button>
-    <button>Button 2</button>
-    <button>Button 3</button>
+    <button onclick="alert('First button is the me')">Button 1</button>
+    <button onclick="alert('Second button is the me')">Button 2</button>
+    <button onclick="alert('Third button is the me')">Button 3</button>
+
+    <h1>Bookmarks</h1>
+    <button id="google">Google</button>
+    <button id="youtube">Youtube</button>
+    <a href="https://fb.com"> <button id="fb">Facebook</button></a> <!-- Answer (2)  -->
+    <a href="https://twitter.com"> <button id="twitter">Twitter</button></a> <!-- Answer (2)  -->
+
+    <div id="bulb" class="bulbcontainer bulb"></div>
+
     <script src="Practice_set.js"></script>
 </body>
+
 </html>
