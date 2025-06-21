@@ -49,6 +49,8 @@
         }
         // This function will return a promise that resolves after a random delay between 1 and 7 seconds
 
+        // The main function will call the addItem function for each item in the text array
+        // and will also add a blinking effect to the last item in the body
         async function main() {
             let t = setInterval(() => {
                 let last = document.body.getElementsByTagName("div");
@@ -62,7 +64,7 @@
                 }
 
             }, 100);
-            // This will add a blinking effect to the last item in the body
+
 
             let text = ["Initialized Hacking now reading your data",
                 "Reading your Files",
@@ -74,8 +76,8 @@
                 await addItem(item)
             }
 
-            await randomDelay()
-            clearInterval(t)
+            // await randomDelay()
+            clearInterval(t) // This will stop the blinking effect for the last item in the body (i.e Cleaning up)
             
         }
         main()
