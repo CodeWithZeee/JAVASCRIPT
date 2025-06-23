@@ -1,0 +1,48 @@
+ <!-- * Create a TODO list app capable of storing your TODOS in local storage 
+ * Add an option to create , delete and access TODO's
+ * Try to make it as interactive as possible  -->
+
+
+<!DOCTYPE html>
+<html>
+  <head><title>Easy TODO App</title></head>
+  <body>
+    <h2>My Tasks</h2>
+    <input id="taskInput" placeholder="Type task..." />
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+      const input = document.getElementById("taskInput");
+      const list = document.getElementById("taskList");
+
+      // Load tasks from localStorage or start with empty array
+      let tasks = [];
+
+      function showTasks() {
+        list.innerHTML = ""; // Clear the list before showing tasks 
+        tasks.forEach((task, index) => {
+          const li = document.createElement("li");
+          li.innerHTML = `${task} <button onclick="deleteTask(${index})">❌</button>`;
+          list.appendChild(li);
+        });
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+      }
+
+      function addTask() {
+        if (input.value.trim()) {
+          tasks.push(input.value.trim()); // Add task to the array
+          input.value = "";
+          showTasks();
+        }
+      }
+
+      function deleteTask(index) {
+        tasks.splice(index, 1);
+        showTasks();
+      }
+
+      showTasks(); // Initialize on load
+    </script>
+  </body>
+</html>
