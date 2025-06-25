@@ -11,3 +11,8 @@ function doubleUniqueConsecutive(arr) {
 
   return result;
 }
+
+
+// Example usage of the doubleUniqueConsecutive function
+console.log(doubleUniqueConsecutive([2, 2, 3, 3, 3, 4]));
+// Output: [4, 6, 8]
